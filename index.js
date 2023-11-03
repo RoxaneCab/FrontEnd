@@ -55,6 +55,9 @@ const allButtonHtml = `<button class="filter filter-selected>Tous</button> `
 // Crée la structure de tous les boutons (Tous + autre cat plus haut)
 const filterButtonHtml = allButtonHtml + buttonHtml
 
+// innerHTML pour mettre à jour le contenu de la div filter-buttons
+filterButton.innerHTML =
+
 
 
 //   // Catégories TRY 1
