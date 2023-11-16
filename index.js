@@ -28,8 +28,11 @@ function createWorks() {
 
                 gallery.appendChild(figure)
 
-                const id = element.categoryId;
-                console.log(id)
+                // const id = element.categoryId;
+                // console.log(id)
+                figure.dataset.categoryId = element.categoryId;
+                // console.log(id)
+                figure.classList.add('work')
             });
 
         })
@@ -60,41 +63,26 @@ fetch('http://localhost:5678/api/categories')
             button.dataset.id = category.id
 
             button.addEventListener('click', (event) => {
-                console.log(event.target)
-                // categoryIdValue = category.name;
-                // console.log(categoryIdValue);
-                // if (categoryIdValue = id)
-                // if (category.id === id) {
 
-                // }
+                let works = document.querySelectorAll('.work')
 
-                //     const btn1 = document.querySelector(".bton")
-                //     btnTous.addEventListener("click", function() {
-                //        displayProjects(data)
-                //     })
+                works.forEach((work) => {
 
-                //     const btn2 = document.querySelector(".bton")
-                //     btnTous.addEventListener("click", function() {
-                //         displayProjects(data)
-                //      })
+                    if (work.dataset.categoryId == event.target.dataset.id) {
+                        work.style.display = "block"
+                    } else {
+                        work.style.display = "none"
+                    }
 
-                //     const btn3 = document.querySelector(".bton")
-                //     btnTous.addEventListener("click", function() {
-                //         displayProjects(data)
-                //      }) 
-
-                //     const btn4 = document.querySelector(".bton")
-                //         btnTous.addEventListener("click", function() {
-                //        displayProjects(data)
-                //     })
-
-
-
-
+                })
             })
+
+
         })
 
     })
+
+
 
 
 

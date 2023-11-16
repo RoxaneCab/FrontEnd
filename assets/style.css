@@ -186,3 +186,89 @@ footer nav ul {
 	margin: 2em
 }
 
+/***** _GENERAL_ *****/
+
+a {
+	text-decoration: none;
+	color: #3D3D3D;
+}
+
+
+/***** _BUTTON CATEGORIES_ *****/
+.filter-button {
+	text-align: center;
+}
+
+.filter-button button {
+	display: inline-block;
+	font-family: 'syne';
+	font-size: 10px;
+	padding: 7px 20px 7px 20px;
+	border-radius: 60px;
+	margin-right: 10px;
+	margin-bottom: 30px;
+	cursor: pointer;
+	background-color: white;
+	color: #1D6154;
+	border: 1px solid #1D6154;
+}
+
+/* add classlist selected en js, actuellement en html */
+.buttonSelected {
+	display: inline-block;
+	font-family: 'syne';
+	font-size: 10px;
+	padding: 7px 20px 7px 20px;
+	border-radius: 60px;
+	margin-right: 10px;
+	margin-bottom: 30px;
+	cursor: pointer;
+	background-color: #1D6154;
+	color: white;
+	border-width: 1px;
+	border-color: #1D6154;
+}
+
+
+/***** _LOGIN_ *****/
+
+.connexion {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 450px;
+	margin-top: 100px;
+}
+
+.connexion h2 {
+	margin-bottom: 20px;
+}
+
+.connexion a {
+	margin-top: 5px;
+	font-size: 14px;
+	text-decoration: underline;
+	color: #3D3D3D;
+	;
+}
+
+.connexion-form {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	margin-top: 25px;
+}
+
+.connexion label {
+	font-family: 'Syne';
+	font-size: 14px;
+	color: black;
+	margin-bottom: 5px;
+}
+
+.connexion input {
+	height: 51px;
+	box-shadow: 0px 0px 15px rgba(244, 243, 237, 255);
+	border: none;	
+}
+
