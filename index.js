@@ -28,10 +28,8 @@ function createWorks() {
 
                 gallery.appendChild(figure)
 
-                // const id = element.categoryId;
-                // console.log(id)
                 figure.dataset.categoryId = element.categoryId;
-                // console.log(id)
+
                 figure.classList.add('work')
             });
 
@@ -53,6 +51,7 @@ fetch('http://localhost:5678/api/categories')
         tousButton.innerHTML = "Tous"
         filterButton.appendChild(tousButton)
 
+
         categories.forEach((category) => {
             let button = document.createElement('button')
             button.innerHTML = category.name
@@ -73,13 +72,9 @@ fetch('http://localhost:5678/api/categories')
                     } else {
                         work.style.display = "none"
                     }
-
                 })
             })
-
-
         })
-
     })
 
 

@@ -215,18 +215,9 @@ a {
 
 /* add classlist selected en js, actuellement en html */
 .buttonSelected {
-	display: inline-block;
-	font-family: 'syne';
-	font-size: 10px;
-	padding: 7px 20px 7px 20px;
-	border-radius: 60px;
-	margin-right: 10px;
-	margin-bottom: 30px;
-	cursor: pointer;
-	background-color: #1D6154;
-	color: white;
-	border-width: 1px;
-	border-color: #1D6154;
+	background-color: #1D6154 !important;
+	color: white !important;
+	border-color: #1D6154 !important;
 }
 
 
