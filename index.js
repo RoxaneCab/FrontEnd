@@ -83,6 +83,43 @@ fetch('http://localhost:5678/api/categories')
     })
 
 
+// 3. EVENT AU CLIC SUR LE BOUTON SE CONNECTER
+const form = document.querySelector('login-form')
+
+form.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const data = {
+        email: e.target.email.value,
+        password: e.target.password.value
+    }
+
+    fetch("http://localhost:5678/api/users/login", {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            sessionStorage.setItem("Token", data.token);
+
+            if (data.message || data.error) {
+                // erreurMessage.style.display = "block";
+                // setTimeout(() => {
+                //     erreurMessage.style.display = "none";
+                // }, 5000);
+            } else {
+                sessionStorage.setItem("isConnected", JSON.stringify(true));
+                window.location.replace("index.html");
+            }
+        })
+});
+
+
+
 
 
 
